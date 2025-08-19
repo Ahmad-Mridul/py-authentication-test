@@ -1,0 +1,39 @@
+{% extends "master.html" %} {% block title %}Tennis Club | SignUp{% endblock %}
+{% block content %}
+<style>
+    h2{
+        color:red;
+    }
+</style>
+<div class="container">
+    <h1>Create an account</h1>
+    {% for message in messages %}
+        <h2>{{message}}</h2>
+    {% endfor %}
+    <form action="" method="POST">
+        {% csrf_token %}
+        <div class="form-row">
+            <label for="name"><span>User name</span>:</label>
+            <input type="text" name="name" id="" />
+        </div>
+        <div class="form-row">
+            <label for="email"><span>Email</span>:</label>
+            <input type="email" name="email" id="" />
+        </div>
+        <div class="form-row">
+            <label for="password"><span>Password</span>:</label>
+            <input type="password" name="password" id="" />
+        </div>
+        <div class="form-row">
+            <label for="password2"><span>Confirm password</span>:</label>
+            <input type="password" name="password2" id="" />
+        </div>
+        <div class="form-row">
+            <label for=""></label>
+            <input type="submit" value="Register">
+        </div>
+    </form>
+    <p>Already have an account? <a href="/login">login</a></p>
+</div>
+
+{% endblock %}
