@@ -9,9 +9,19 @@
     </head>
     <body>
         <div class="topnav">
-            <a href="/">HOME</a> |
-            <a href="/members">MEMBERS</a> |
-            <a href="/register">FORM</a>
+            <div class="">
+                <a href="/">HOME</a> | <a href="/members">MEMBERS</a>
+                {% comment %} <a href="/register">FORM</a> {% endcomment %}
+            </div>
+            <div class="">
+                {% if user.is_authenticated %}
+                <a>{{user.username|upper}}</a>
+                <a class='btn' href='logout'>Logout</a>
+                {% else %}
+                <a class='btn' href="register">Sign up</a>
+                <a class='btn' href="login">Login</a>
+                {% endif %}
+            </div>
         </div>
         {% block content %}{% endblock %}
     </body>

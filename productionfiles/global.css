@@ -7,9 +7,23 @@ body {
 }
 .topnav {
     background-color: #375bdc;
-    color: #ffffff;
+    /* color: #ffffff; */
     padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
+.btn{
+    color: black !important;
+    background: white;
+    padding: 5px;
+    border-radius: 5px;
+    
+}
+.btn:hover{
+    text-decoration: none;
+}
+
 .topnav a:link,
 .topnav a:visited {
     text-decoration: none;
@@ -95,6 +109,7 @@ input{
 h2{
     color:red;
 }
-.container>a{
-    color: white !important;
+.container>p>a{
+    color: #ffffff;
 }
+

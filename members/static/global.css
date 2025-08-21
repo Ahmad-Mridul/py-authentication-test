@@ -9,7 +9,24 @@ body {
     background-color: #375bdc;
     color: #ffffff;
     padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
+.btn{
+    color: black !important;
+    background: white;
+    padding: 5px;
+    border-radius: 5px;
+    
+}
+.btn:hover{
+    text-decoration: none !important;
+    background-color: gray;
+    color: white !important;
+    transition: all 0.5s;
+}
+
 .topnav a:link,
 .topnav a:visited {
     text-decoration: none;
@@ -98,3 +115,4 @@ h2{
 .container>p>a{
     color: #ffffff;
 }
+
